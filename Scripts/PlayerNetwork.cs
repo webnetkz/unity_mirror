@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class Player : NetworkBehaviour
+public class PlayerNetwork : NetworkBehaviour
 {
-  [SyncVar] // Синхронизация значения
+  [SyncVar]
   [SerializeField]
   private float speed;
 
   private Rigidbody rb;
-
 
   private void Start()
   {
@@ -32,10 +31,12 @@ public class Player : NetworkBehaviour
     InputManager.Instance.SetPlayer(this);
   }
 
+  //[ClientRpc]
 
+  [Command]
   public void CmdMovePlayer(Vector3 movementVector)
   {
-    
+    rb.AddForce(movementVector.normalized * speed);
   }
 
 }

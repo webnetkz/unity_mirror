@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8687131520180317691}
   - component: {fileID: -4501019127351065271}
   - component: {fileID: -2265008812930996942}
-  - component: {fileID: -6188448806996064908}
+  - component: {fileID: -2815402263405064715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -189,7 +189,7 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
---- !u!114 &-6188448806996064908
+--- !u!114 &-2815402263405064715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,10 +198,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3739502705047623735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0748c7eda22b19845b9ce0e4d23d1021, type: 3}
+  m_Script: {fileID: 11500000, guid: 42c79d201057ac642b0343f088181acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  speed: 30
-  rigidbody2d: {fileID: 0}
+  speed: 0

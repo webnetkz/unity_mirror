@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
 
   private Vector3 movementVector = new Vector3();
   [SerializeField]
-  private Player playerObj;
+  private PlayerNetwork playerObj;
 
   private void Awake()
   {
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     MoveInput();
   }
 
-  public void SetPlayer(Player pl)
+  public void SetPlayer(PlayerNetwork pl)
   {
     playerObj = pl;
   }
@@ -41,5 +41,7 @@ public class InputManager : MonoBehaviour
   {
     movementVector.x = Input.GetAxis("Horizontal");
     movementVector.z = Input.GetAxis("Vertical");
+
+    playerObj.CmdMovePlayer(movementVector);
   }
 }
